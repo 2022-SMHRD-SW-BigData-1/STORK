@@ -1,0 +1,152 @@
+@keyframes jello-horizontal {
+  0%,
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+.mother-icon {
+  position: absolute;
+  top: 140px;
+  left: 0;
+  width: 375px;
+  height: 672px;
+  object-fit: cover;
+}
+.choice3-btn-div-icon {
+  position: absolute;
+  top: 0;
+  left: -4px;
+  border-radius: var(--br-sm);
+  width: 188px;
+  height: 68px;
+}
+.choice-text3-icon,
+.choice3-btn {
+  position: absolute;
+  top: 17px;
+  left: 29px;
+  width: 126.43px;
+  height: 25.71px;
+}
+.choice3-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 562px;
+  left: 23px;
+  width: 180px;
+  height: 60px;
+}
+.choice3-btn:hover {
+  animation: 2s ease 0s infinite normal none jello-horizontal;
+  opacity: 1;
+}
+.choice3-btn:active {
+  animation: 1s ease 0s infinite normal none pulsate;
+  opacity: 1;
+}
+.choice-text2-icon,
+.choice2-btn {
+  position: absolute;
+  top: 17px;
+  left: 28px;
+  width: 125.2px;
+  height: 25.2px;
+}
+.choice2-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 469px;
+  left: 23px;
+  width: 180px;
+  height: 60px;
+}
+.choice2-btn:hover {
+  animation: 2s ease 0s infinite normal none jello-horizontal;
+  opacity: 1;
+}
+.choice2-btn:active {
+  animation: 1s ease 0s infinite normal none pulsate;
+  opacity: 1;
+}
+.choice-text1-icon,
+.choice1-btn {
+  position: absolute;
+  top: 17px;
+  left: 27px;
+  width: 128.95px;
+  height: 25.88px;
+}
+.choice1-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 373px;
+  left: 23px;
+  width: 180px;
+  height: 60px;
+}
+.choice1-btn:hover {
+  animation: 2s ease 0s infinite normal none jello-horizontal;
+  opacity: 1;
+}
+.choice1-btn:active {
+  animation: 1s ease 0s infinite normal none pulsate;
+  opacity: 1;
+}
+.policy-title-icon {
+  position: absolute;
+  top: 111px;
+  left: 87px;
+  width: 213.22px;
+  height: 34.74px;
+}
+.policypage {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 812px;
+  overflow: hidden;
+}

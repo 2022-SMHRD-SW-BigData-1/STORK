@@ -1,0 +1,121 @@
+.footer-div,
+.policy-btn-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+}
+.footer-div {
+  border-radius: var(--br-md) var(--br-md) 0 0;
+  background-color: var(--color-lightpink-200);
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.25);
+  width: 375px;
+}
+.policy-btn-div {
+  width: 75px;
+}
+.policy-btn,
+.policy-icon {
+  position: absolute;
+  top: 45.88px;
+  left: 21.62px;
+  width: 30.75px;
+  height: 7.24px;
+}
+.policy-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 60px;
+}
+.com-icon,
+.community-icon {
+  position: absolute;
+  top: 44.82px;
+  left: 11.1px;
+  width: 51.81px;
+  height: 7.3px;
+}
+.com-icon {
+  top: 10px;
+  left: 22px;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+.com-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 75px;
+  width: 75px;
+  height: 60px;
+}
+.home-btn,
+.home-icon {
+  position: absolute;
+  top: 44.87px;
+  left: 25.24px;
+  width: 23.53px;
+  height: 7.24px;
+}
+.home-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 0;
+  left: 150px;
+  width: 75px;
+  height: 60px;
+}
+.tip-btn,
+.tip-icon {
+  position: absolute;
+  top: 44.88px;
+  left: 30.29px;
+  width: 13.41px;
+  height: 7.19px;
+}
+.tip-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 0;
+  left: 225px;
+  width: 75px;
+  height: 60px;
+}
+.check-btn,
+.check-icon {
+  position: absolute;
+  top: 44.86px;
+  left: 23.04px;
+  width: 27.92px;
+  height: 7.26px;
+}
+.check-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 0;
+  left: 300px;
+  width: 75px;
+  height: 60px;
+}
+.footer {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+}
