@@ -1,7 +1,7 @@
 .group-child,
 .p_tip_main {
   position: absolute;
-  width: 85%;
+  width: 95%;
 }
 .p_tip_main {
   margin: 0;
@@ -18,7 +18,7 @@
   right: 3.55%;
   bottom: 17.7%;
   left: 3.85%;
-  width: 82%;
+  width: 92%;
   background-color: #d9d9d9;
 }
 .p1_tip_main,
@@ -46,7 +46,7 @@
 .baby-img-icon {
   position: absolute;
   height: 56.64%;
-  width: 85%;
+  width: 100f%;
   top: 0;
   right: 0;
   bottom: 43.36%;
@@ -68,7 +68,7 @@
 .kg,
 .mom-tip-child {
   position: absolute;
-  width: 82%;
+  width: 95%;
   left: 4.5%;
 }
 .kg {
@@ -111,7 +111,7 @@
 .mom-img-icon {
   position: absolute;
   height: 54.47%;
-  width: 85%;
+  width: 100%;
   top: 0;
   right: 0;
   bottom: 45.53%;
@@ -192,4 +192,5 @@
   font-size: 10px;
   color: rgba(25,24,24,0.7);
   font-family: var(--font-poppins);
+  /* top:60px; */
 }

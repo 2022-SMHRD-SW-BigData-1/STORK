@@ -58,7 +58,7 @@ const TipMain = () => {
       </div>
       <div className="tip-title">
         <p className="p5_tip_main">주기별 맞춤 정보</p>
-        <FormControl
+        {/* <FormControl
           className="tipinspect-btn"
           sx={{ width: 69.90532684326172 }}
           variant="outlined"
@@ -69,10 +69,9 @@ const TipMain = () => {
             <MenuItem value={`검사&증상`}>{`검사&증상`}</MenuItem>
           </Select>
           <FormHelperText />
-        </FormControl>
+        </FormControl> */}
       </div>
     </div>
-    {/* <Footer/> */}
     </>
   );
 };
