@@ -1,0 +1,195 @@
+.group-child,
+.p_tip_main {
+  position: absolute;
+  width: 85%;
+}
+.p_tip_main {
+  margin: 0;
+  height: 14.45%;
+  top: 85.55%;
+  left: 2.96%;
+  letter-spacing: -0.27px;
+  font-weight: 100;
+  display: inline-block;
+}
+.group-child {
+  height: 0.29%;
+  top: 82.01%;
+  right: 3.55%;
+  bottom: 17.7%;
+  left: 3.85%;
+  width: 82%;
+  background-color: #d9d9d9;
+}
+.p1_tip_main,
+.p2_tip_main {
+  margin: 0;
+  position: absolute;
+  height: 5.9%;
+  width: 89.94%;
+  top: 74.34%;
+  left: 7.4%;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  font-weight: 700;
+  color: #f58080;
+  display: inline-block;
+}
+.p2_tip_main {
+  height: 9.44%;
+  width: 95.56%;
+  top: 62.83%;
+  left: 0.59%;
+  font-size: 20px;
+  color: #000;
+}
+.baby-img-icon {
+  position: absolute;
+  height: 56.64%;
+  width: 85%;
+  top: 0;
+  right: 0;
+  bottom: 43.36%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.parent_tip_main {
+  position: absolute;
+  height: 41.75%;
+  width: 90.13%;
+  top: 70%;
+  right: 5.33%;
+  bottom: -2.96%;
+  left: 4.53%;
+}
+.kg,
+.mom-tip-child {
+  position: absolute;
+  width: 82%;
+  left: 4.5%;
+}
+.kg {
+  margin: 0;
+  height: 19.02%;
+  top: 80.98%;
+  letter-spacing: 0.27px;
+  font-weight: 100;
+  display: inline-block;
+}
+.mom-tip-child {
+  height: 0.29%;
+  top: 77.81%;
+  right: 1.5%;
+  bottom: 21.9%;
+  background-color: #d9d9d9;
+}
+.p3_tip_main,
+.p4_tip_main {
+  margin: 0;
+  position: absolute;
+  height: 5.76%;
+  width: 91.29%;
+  top: 69.74%;
+  left: 8.11%;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  font-weight: 700;
+  color: #f58080;
+  display: inline-block;
+}
+.p4_tip_main {
+  height: 9.22%;
+  width: 95.5%;
+  top: 57.64%;
+  left: 1.2%;
+  font-size: 20px;
+  color: #000;
+}
+.mom-img-icon {
+  position: absolute;
+  height: 54.47%;
+  width: 85%;
+  top: 0;
+  right: 0;
+  bottom: 45.53%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.mom-tip {
+  position: absolute;
+  height: 42.73%;
+  width: 88.8%;
+  top: 14.53%;
+  right: 7.2%;
+  bottom: 42.73%;
+  left: 4%;
+  color: rgba(0, 0, 0, 0.7);
+}
+.day-change-icon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.days-change {
+  position: absolute;
+  height: 3.69%;
+  width: 79.47%;
+  top: 9.48%;
+  right: 11.47%;
+  bottom: 86.82%;
+  left: 9.07%;
+}
+.p5_tip_main {
+  margin: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  letter-spacing: -0.2px;
+  font-weight: 700;
+  display: inline-block;
+}
+.tip-title,
+.tipinspect-btn {
+  position: absolute;
+  height: 55.32%;
+  width: 19.53%;
+  top: 15.18%;
+  right: 7.57%;
+  bottom: 29.5%;
+  left: 72.9%;
+}
+.tip-title {
+  height: 6.68%;
+  width: 95.47%;
+  top: 2.46%;
+  right: -0.8%;
+  bottom: 90.86%;
+  left: 5.33%;
+  font-size: 32px;
+  color: #000;
+}
+.tip-main {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 812px;
+  text-align: left;
+  font-size: 10px;
+  color: rgba(25,24,24,0.7);
+  font-family: var(--font-poppins);
+}

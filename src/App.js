@@ -15,6 +15,9 @@ import EmergencyPage from "./components/pages/SideBtn/EmergencyPage";
 import MomDiaryPage from "./components/pages/MomDiary/MomDiaryPage";
 import MomDiaryWritePage from "./components/pages/MomDiary/MomDiaryWritePage";
 import MomDiaryMapPage from "./components/pages/MomDiary/MomDiaryMapPage";
+import LaborMain from "./components/pages/Labor/LaborMain";
+import TipMain from "./components/pages/Tip/TipMain";
+import InspectStart from "./components/pages/Inspect/InspectStart";
 
 function App() {
   const action = useNavigationType();
@@ -63,6 +66,9 @@ function App() {
       <Route path="/MomDiary" element={<MomDiaryPage />} />
       <Route path="/MomDiaryWrite" element={<MomDiaryWritePage />} />
       <Route path="/MomDiaryMap" element={<MomDiaryMapPage />} />
+      <Route path="/Labor" element={<LaborMain />} />
+      <Route path="/Tip" element={<TipMain />} />
+      <Route path="/Inspect" element={<InspectStart />} />
     </Routes>
   );
 }
