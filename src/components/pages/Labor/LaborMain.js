@@ -13,7 +13,16 @@ const LaborMain = () => {
   const [sec,setSec] = useState(0)
   const [min,setMin] = useState(0)
   const [hour,setHour] = useState(0)
+
+  const [start, setStart] = useState();
+  const [end, setEnd] = useState();
+
   const [power, setPower] = useState("off")
+
+  let test = []
+  const [data, setData] = useState([])
+  const [testArray, setTestArray] = useState([]);
+
   let temp = 0;
   useEffect(() => {
     let interval;
@@ -23,12 +32,21 @@ const LaborMain = () => {
       interval = setInterval(() => {
         setSec((sec) => sec + 1);
        
-      }, 100);
+      }, 1000);
     } else if (power=="off") {
       clearInterval(interval);
+      console.log("hi",end)
+
+      // DB 전송 
+      
+
+
     }
     return () => clearInterval(interval);
   }, [power]);
+
+
+
 
   if(sec>=60){
     setSec(0)
@@ -45,32 +63,116 @@ const LaborMain = () => {
     setPower("off")
   }
 
-
   function stop_watch(){
     // 스톱워치 시작 
     if(power=="off"){
       setPower("on")
+      setStart(new Date());
     }
     // 스톱워치 종료
     else if(power=="on"){
       let temp = sec;
-      let now = new Date();
-      let now_current = now.getDay()
-      let now_month = now.getMonth()+1;
-      let now_day = now.getDate();
-      let now_hour = now.getHours()
-      let now_min = now.getMinutes(); 
-      let now_sec = now.getSeconds();
+      let end_ = new Date()
+      setEnd(end_)
 
-      test = data.splice(0,0,{sec:temp, 
-                              now_month: now_month, 
-                              now_day: now_day,
-                              now_hour: now_hour,
-                              now_min : now_min
+      console.log(end_)
+      const start_month = start.getMonth()+1;
+      const start_day = start.getDay();
+      const start_hour = start.getHours();
+      const start_min = start.getMinutes();
+      const start_sec = start.getSeconds();
+      
+      // 진통동안 시간
+      let term =  (end_.getTime()-start.getTime());
+      let term_hour = parseInt(term/(1000*60*60));
+      let term_min = parseInt((term%(1000*60*60))/(1000*60));
+      let term_sec = parseInt((term%(1000*60))/(1000));
+
+      // 진통 주기 
+      let cycle = 0;
+      let cycle_hour = 0;
+      let cycle_min = 0;
+      let cycle_sec = 0;
+
+      if(data.length>0){
+        cycle = (start.getTime() - data[0].start.getTime());
+        cycle_hour = parseInt(cycle/(1000*60*60));
+        cycle_min = parseInt((cycle%(1000*60*60))/(1000*60));
+        cycle_sec = parseInt((cycle%(1000*60))/(1000));
+      }
+      console.log("시",term_hour);
+      console.log("분",term_min);
+      console.log("초",term_sec);
+
+      test = data.splice(0,0,{
+                              sec:temp, 
+                              start_month : start_month,
+                              start_day : start_day,
+                              start_hour : start_hour,
+                              start_min : start_min,
+
+                              term_hour : term_hour ,
+                              term_min  : term_min,
+                              term_sec : term_sec,
+
+                              cycle_hour : cycle_hour,
+                              cycle_min : cycle_min,
+                              cycle_sec : cycle_sec,
+
+                              start : start,
+                              end : end_,
                             });
+
       setData(data.concat(test))
       
-      console.log(data)
+      let total_arr = []
+      let total_cycle_arr = []
+      for(let i = 0; i < 4;i++){
+        if(data[i]==undefined){
+          break;
+        }
+        // 진통동안 총 시간(초)
+        let total = data[i].term_sec + data[i].term_min*60 + data[i].term_hour*60*60;
+        total_arr[i] = total;
+
+        // 진통 주기(초)
+        let total_cycle = data[i].cycle_sec + data[i].cycle_min*60 + data[i].cycle_hour*60*60;
+        total_cycle_arr[i] = total_cycle;
+      }
+      console.log("total",total_arr);
+      console.log("cycle",total_cycle_arr);
+
+      // count =>  진진통 단계별 판단 
+      let count_1 = 0;
+      let count_2 = 0;
+      let count_3 = 0;
+      for(let i = 0; i < 4; i++){
+        if(data[i]==undefined){
+          break;
+        }
+        if((15<=total_arr[i]<=50) && (300<=total_cycle_arr<=900)){
+          count_1 ++;
+        }
+        if((30<=total_arr[i]<=60) && (240<=total_cycle_arr<=420)){
+          count_2 ++;
+        }
+        if((50<=total_arr[i]<=90) && (120<=total_cycle_arr<=180)){
+          count_3 ++;
+        }
+      }
+
+      // 진진통 판별 시 
+      if(count_1 == 4){
+
+      }
+      if(count_2 == 4){
+
+      }
+      if(count_3 == 4){
+
+      }
+
+
       setSec(0)
       setMin(0)
       setHour(0)
@@ -79,28 +181,32 @@ const LaborMain = () => {
   }
 
   //const [data, setData] = useState([{day:"08/03",clock:"08:01",hour:"00",min:"05",sec:"30",}])
-  let test = []
-  const [data, setData] = useState([])
-  const [testArray, setTestArray] = useState([]);
+ 
   useEffect(function(){
     setTestArray(data.map((data)=>{
       return(<>
               <LaborTime
-                now_month = {data.now_month}
-                now_day = {data.now_day}
-                now_hour = {data.now_hour}
-                now_min = {data.now_min}
-                now_sec = {data.now_sec}
                 sec={data.sec}
+                start_month = {data.start_month}
+                start_day = {data.start_day}
+                start_hour = {data.start_hour}
+                start_min = {data.start_min}
+
+                term_hour = {data.term_hour }
+                term_min  = {data.term_min}
+                term_sec = {data.term_sec}
+
+                cycle_hour = {data.cycle_hour}
+                cycle_min = {data.cycle_min}
+                cycle_sec = {data.cycle_sec}
               />
             </>);
     }));
   },[data])
+
   function ch(){
     let now = new Date();
-    console.log(now)
-    now.setSeconds(now.getSeconds() -30);
-    console.log(now.getSeconds(0))
+    console.log(now.toString());
   }
   
 
@@ -110,7 +216,7 @@ const LaborMain = () => {
     <div className="labor-main">
       <img className="labor-main-child" alt="" src={vector_20_labormain} />
       <img className="labor-main-item" alt="" src={fetal_labor} onClick={stop_watch}/>
-      <div className="labor-main-inner">
+      <div className="labor-main-inner" onClick={ch}>
         {testArray}
       </div>
       <b className="timer_labor_main">{hour>0? hour+" : " : ""}{min<10? "0"+min : min} : {sec<10? "0"+sec : sec}</b>
