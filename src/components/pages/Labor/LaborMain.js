@@ -3,6 +3,7 @@ import fetal_labor from "../../../assets/images/Labor/fetal_labor.png";
 import vector_20_labormain from "../../../assets/svg/Labor/vector_20_labormain.svg";
 import LaborTime from "./LaborTime";
 import React, { useState, useEffect, useRef } from 'react';
+import axios from "axios";
 
 import Header from "../Bar/Header";
 import SideBar from "../Bar/SideBar";
@@ -35,15 +36,61 @@ const LaborMain = () => {
       }, 1000);
     } else if (power=="off") {
       clearInterval(interval);
-      console.log("hi",end)
+      console.log(data[0]);
 
-      // DB 전송 
-      
+      // DB 전송
+    if(data.length>0){
+      axios
+      .post("http://127.0.0.1:3001/Labor", {
+        start:data[0],
+    })
+      .then((res) => {
+      })
+      .catch((err) => {
+        console.log("문제발생123", err);
+      });
+    }
 
 
     }
     return () => clearInterval(interval);
   }, [power]);
+  
+
+  // 진통 데이터 받아오기
+  useEffect(()=>{
+    axios.post("http://127.0.0.1:3001/Labor_data",{
+    })
+    .then((res)=>{
+      console.log("데이터 받기 1111",res.data.data.length)
+      let labor = res.data.data;
+      let labor_arr = []
+      for(let i =0; i < labor.length; i++){
+        labor_arr.push(
+          {
+              sec: 0,
+              start_month: labor[i].start_month,
+              start_day: labor[i].start_day,
+              start_hour: labor[i].start_hour,
+              start_min: labor[i].start_min,
+              term_hour: labor[i].term_hour,
+              term_min: labor[i].term_min,
+              term_sec: labor[i].term_sec,
+              cycle_hour: labor[i].cycle_hour,
+              cycle_min: labor[i].cycle_min,
+              cycle_sec: labor[i].cycle_sec,
+              start_time: labor[i].start_time,
+              end_time: labor[i].end_time
+          }
+        )
+      }
+      setData(labor_arr);
+
+    })
+    .catch((err)=>{
+      console.log("데이터 오류")
+    })
+  },[])
 
 
 
@@ -95,11 +142,12 @@ const LaborMain = () => {
       let cycle_sec = 0;
 
       if(data.length>0){
-        cycle = (start.getTime() - data[0].start.getTime());
+        cycle = (start.getTime() - data[0].start_time);
         cycle_hour = parseInt(cycle/(1000*60*60));
         cycle_min = parseInt((cycle%(1000*60*60))/(1000*60));
         cycle_sec = parseInt((cycle%(1000*60))/(1000));
       }
+      console.log(data)
       console.log("시",term_hour);
       console.log("분",term_min);
       console.log("초",term_sec);
@@ -119,8 +167,8 @@ const LaborMain = () => {
                               cycle_min : cycle_min,
                               cycle_sec : cycle_sec,
 
-                              start : start,
-                              end : end_,
+                              start_time : start.getTime(),
+                              end_time : end_.getTime(),
                             });
 
       setData(data.concat(test))
@@ -206,7 +254,7 @@ const LaborMain = () => {
 
   function ch(){
     let now = new Date();
-    console.log(now.toString());
+      console.log(data)
   }
   
 

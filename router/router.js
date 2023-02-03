@@ -92,24 +92,63 @@ router.post("/login", function (request, response) {
   });
 });
 
-//   let id = request.body.id;
-//   let pw = request.body.pw;
-//   let sql = `insert into test(id,pw) values(?,?)`;
-//   conn.query(sql,[id,pw],
-//   function (err, rows) {
-//       console.log(rows)
-//     if (!err) {
-//       console.log("문제없음");
-//       res.json({
-//         test : rows,
-//         // email: email,
-//       });
-//     } else {
-//       console.log("문제존나많아 앙기철ㄸㄸㄸㄸ", err);
-//       // throw err;
-//     }
-//   }
-// );
+// 진통 데이터 insert
+router.post("/Labor", function (request, response) {
+
+  let labor =request.body.start;
+  let start_month = labor.start_month;
+  let start_day = labor.start_day;
+  let start_hour = labor.start_hour;
+  let start_min = labor.start_min;
+  
+  let term_hour = labor.term_hour;
+  let term_min = labor.term_min;
+  let term_sec = labor.term_sec;
+
+  let cycle_hour = labor.cycle_hour;
+  let cycle_min= labor.cycle_min;
+  let cycle_sec = labor.cycle_sec;
+
+  let start_time = labor.start_time;
+  let end_time = labor.end_time;
+
+  let sql = `insert into laborpain (kid_seq, start_month,
+                                    start_day,start_hour,start_min,
+                                    term_hour,term_min,term_sec,
+                                    cycle_hour,cycle_min,cycle_sec,
+                                    start_time,end_time) values(3,?,?,?,?,?,?,?,?,?,?,?,?)`;
+  conn.query(sql, [start_month,start_day,
+                  start_hour,start_min,
+                  term_hour,term_min,term_sec,
+                  cycle_hour,cycle_min,cycle_sec,
+                  start_time,end_time], function (err, rows) {
+    if (!err) {
+      response.json({
+        result: "success",
+      });
+    } else {
+      console.log("진통실패");
+    }
+  });
+});
+
+
+// 진통 데이터 보내기
+router.post("/Labor_data", function (request, response) {
+  let id = 3;
+  let sql = `select * from laborpain where(kid_seq = (?)) order by 1 DESC`;
+  conn.query(sql, [id], function (err, rows) {
+    if (!err) {
+      response.json({
+        data: rows,
+      });
+    } else {
+      console.log("ss ")
+    }
+  });
+});
+
+
 
 router.get("*", function (request, response) {
   console.log("Happy Hacking!");
