@@ -1,11 +1,11 @@
 import "../../styles/Inspect/InspectStart.css"
-import arrow from "../../../assets/svg/Inspect/arrow1.svg";
-import vector_10 from "../../../assets/svg/Inspect/vector10.svg";
-import epclips from "../../../assets/svg/Inspect/ellipse14.svg"
 import InspectLeft from "./Inspect_left";
 import InspectRight from "./Inspect_right";
 import Data from "../Data/Inspect_Data"
 
+import Header from "../Bar/Header";
+import SideBar from "../Bar/SideBar";
+import Footer from "../Bar/Footer";
 
 const InspectStart = () => {
 
@@ -15,6 +15,8 @@ const InspectStart = () => {
 
   return (
     <>
+      <Header/>
+      <div className="empty_box" />
       {Data.map((data)=>{
         return(
         <>
@@ -49,7 +51,7 @@ const InspectStart = () => {
         </>
         );
       })}
-    
+      <Footer/>
     </>
   );
 };

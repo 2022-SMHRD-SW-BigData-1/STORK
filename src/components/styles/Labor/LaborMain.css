@@ -3,7 +3,7 @@
   position: absolute;
   height: 43.05%;
   width: 100.53%;
-  top: 58.67%;
+  top: 50.67%;
   right: -0.53%;
   bottom: -1.72%;
   left: 0;
@@ -14,7 +14,7 @@
 .labor-main-item {
   height: 32.03%;
   width: 69.34%;
-  top: 65.46%;
+  top: 57.46%;
   right: 15.04%;
   bottom: 2.51%;
   left: 15.62%;
@@ -22,7 +22,7 @@
 }
 .labor-main-inner {
   position: absolute;
-  height: 58%;
+  height: 50%;
   width: 100%;
   top: 0;
   right: 0;
@@ -34,7 +34,7 @@
   position: absolute;
   height: 5.17%;
   width: 30.4%;
-  top: 64.66%;
+  top: 56.66%;
   left: 36.8%;
   letter-spacing: -0.2px;
   display: inline-block;
@@ -49,4 +49,7 @@
   font-size: 32px;
   color: #000;
   font-family: var(--font-poppins);
+}
+.empty_box{
+  height: 60px;
 }

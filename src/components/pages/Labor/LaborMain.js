@@ -260,15 +260,17 @@ const LaborMain = () => {
 
   return (
     <>
-    {/* <Header/> */}
+    <Header/>
     <div className="labor-main">
       <img className="labor-main-child" alt="" src={vector_20_labormain} />
       <img className="labor-main-item" alt="" src={fetal_labor} onClick={stop_watch}/>
       <div className="labor-main-inner" onClick={ch}>
+        <div className="empty_box"></div>
         {testArray}
       </div>
       <b className="timer_labor_main">{hour>0? hour+" : " : ""}{min<10? "0"+min : min} : {sec<10? "0"+sec : sec}</b>
     </div>
+    <Footer />
     </>
   );
 };

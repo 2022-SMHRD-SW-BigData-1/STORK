@@ -29,7 +29,8 @@ const TipMain = () => {
   
   return (
     <>
-    {/* <Header/> */}
+    <Header/>
+    <div className="empty_box"/>
     {/* <a href = "tel:01056025526">01056025526</a> */}
     <div className="tip-main">
       <div className="parent_tip_main">
@@ -72,6 +73,7 @@ const TipMain = () => {
         </FormControl> */}
       </div>
     </div>
+    <Footer />
     </>
   );
 };
