@@ -6,15 +6,15 @@
 .p_tip_main {
   margin: 0;
   height: 14.45%;
-  top: 85.55%;
-  left: 2.96%;
+  top: 110%;
+  left: 4.5%;
   letter-spacing: -0.27px;
   font-weight: 100;
   display: inline-block;
 }
 .group-child {
   height: 0.29%;
-  top: 82.01%;
+  top: 108%;
   right: 3.55%;
   bottom: 17.7%;
   left: 3.85%;
@@ -27,8 +27,8 @@
   position: absolute;
   height: 5.9%;
   width: 89.94%;
-  top: 74.34%;
-  left: 7.4%;
+  top: 99%;
+  left: 4.5%;
   font-size: 12px;
   letter-spacing: -0.2px;
   font-weight: 700;
@@ -38,19 +38,20 @@
 .p2_tip_main {
   height: 9.44%;
   width: 95.56%;
-  top: 62.83%;
+  top: 87%;
   left: 0.59%;
   font-size: 20px;
   color: #000;
 }
 .baby-img-icon {
   position: absolute;
-  height: 56.64%;
-  width: 100f%;
-  top: 0;
+  /* height: 56.64%; */
+  /* width: 100%; */
+  /* width: 50%; */
+  top: 30%;
   right: 0;
   bottom: 43.36%;
-  left: 0;
+  left: 30%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -74,14 +75,14 @@
 .kg {
   margin: 0;
   height: 19.02%;
-  top: 80.98%;
+  top: 100%;
   letter-spacing: 0.27px;
   font-weight: 100;
   display: inline-block;
 }
 .mom-tip-child {
   height: 0.29%;
-  top: 77.81%;
+  top: 98%;
   right: 1.5%;
   bottom: 21.9%;
   background-color: #d9d9d9;
@@ -92,8 +93,8 @@
   position: absolute;
   height: 5.76%;
   width: 91.29%;
-  top: 69.74%;
-  left: 8.11%;
+  top: 88%;
+  left: 4.5%;
   font-size: 12px;
   letter-spacing: -0.2px;
   font-weight: 700;
@@ -103,7 +104,7 @@
 .p4_tip_main {
   height: 9.22%;
   width: 95.5%;
-  top: 57.64%;
+  top: 77%;
   left: 1.2%;
   font-size: 20px;
   color: #000;
@@ -111,11 +112,11 @@
 .mom-img-icon {
   position: absolute;
   height: 54.47%;
-  width: 100%;
-  top: 0;
+  width: 80%;
+  top: 15%;
   right: 0;
   bottom: 45.53%;
-  left: 0;
+  left: 10%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -135,7 +136,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 0;
+  top: 50%;
   right: 0;
   bottom: 0;
   left: 0;
