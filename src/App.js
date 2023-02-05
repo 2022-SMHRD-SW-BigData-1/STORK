@@ -18,6 +18,7 @@ import MomDiaryMapPage from "./components/pages/MomDiary/MomDiaryMapPage";
 import LaborMain from "./components/pages/Labor/LaborMain";
 import TipMain from "./components/pages/Tip/TipMain";
 import InspectStart from "./components/pages/Inspect/InspectStart";
+import LaborBook from "./components/pages/Labor/LaborBook";
 
 function App() {
   const action = useNavigationType();
@@ -69,6 +70,7 @@ function App() {
       <Route path="/Labor" element={<LaborMain />} />
       <Route path="/Tip" element={<TipMain />} />
       <Route path="/Inspect" element={<InspectStart />} />
+      <Route path="/LaborBook" element={<LaborBook/>} />
     </Routes>
   );
 }

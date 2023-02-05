@@ -4,13 +4,14 @@ import vector_20_labormain from "../../../assets/svg/Labor/vector_20_labormain.s
 import LaborTime from "./LaborTime";
 import React, { useState, useEffect, useRef } from 'react';
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 import Header from "../Bar/Header";
 import SideBar from "../Bar/SideBar";
 import Footer from "../Bar/Footer";
 
 const LaborMain = () => {
-  
+  const nav = useNavigate();
   const [sec,setSec] = useState(0)
   const [min,setMin] = useState(0)
   const [hour,setHour] = useState(0)
@@ -33,7 +34,7 @@ const LaborMain = () => {
       interval = setInterval(() => {
         setSec((sec) => sec + 1);
        
-      }, 100);
+      }, 1000);
     } else if (power=="off") {
       clearInterval(interval);
       console.log(data[0]);
@@ -261,7 +262,7 @@ const LaborMain = () => {
 
   return (
     <>
-    <Header/>
+    <Header/> 
     <div className="labor-main">
       <img className="labor-main-child" alt="" src={vector_20_labormain} />
       <img className="labor-main-item" alt="" src={fetal_labor} onClick={stop_watch}/>
@@ -271,6 +272,7 @@ const LaborMain = () => {
       </div>
       <b className="timer_labor_main">{hour>0? hour+" : " : ""}{min<10? "0"+min : min} : {sec<10? "0"+sec : sec}</b>
     </div>
+        <div className="labor_help" onClick={()=> nav('/laborbook')}>?</div>
         <div className="alert_labor">dddddddddd</div>
     <Footer />
     </>

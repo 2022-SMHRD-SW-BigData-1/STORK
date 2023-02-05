@@ -62,3 +62,15 @@
   left: 10%;
   height: 5%;
 }
+.labor_help{
+  display: flex;
+  position : absolute;
+  top:  57.8%;
+  left: 70%;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 3px solid black;
+  font-weight: bold;
+  border-radius: 50%;
+}
