@@ -53,3 +53,12 @@
 .empty_box{
   height: 60px;
 }
+.alert_labor{
+  position: absolute;
+  width: 80%;
+  border : 2px solid red;
+  border-radius: 5%;
+  top: 84%;
+  left: 10%;
+  height: 5%;
+}

@@ -33,7 +33,7 @@ const LaborMain = () => {
       interval = setInterval(() => {
         setSec((sec) => sec + 1);
        
-      }, 1000);
+      }, 100);
     } else if (power=="off") {
       clearInterval(interval);
       console.log(data[0]);
@@ -211,12 +211,13 @@ const LaborMain = () => {
 
       // 진진통 판별 시 
       if(count_1 == 4){
-
+        console("1");
       }
       if(count_2 == 4){
-
+        console("2");
       }
       if(count_3 == 4){
+        console("3");
 
       }
 
@@ -270,6 +271,7 @@ const LaborMain = () => {
       </div>
       <b className="timer_labor_main">{hour>0? hour+" : " : ""}{min<10? "0"+min : min} : {sec<10? "0"+sec : sec}</b>
     </div>
+        <div className="alert_labor">dddddddddd</div>
     <Footer />
     </>
   );
