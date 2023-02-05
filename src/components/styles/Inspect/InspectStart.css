@@ -2,7 +2,7 @@
     position: absolute;
     height: 27.62%;
     width: 36.8%;
-    top: 4.76%;
+    top: 20.76%;
     left: 4%;
     letter-spacing: -0.2px;
     display: inline-block;
@@ -15,7 +15,8 @@
     right: 0;
     bottom: 98.1%;
     left: 0;
-    background-color: #d9d9d9;
+    /* background-color: #d9d9d9; */
+    border-top: 2px dashed #d9d9d9;
   }
   .inspect-start-item {
     position: absolute;
@@ -41,6 +42,6 @@
   }
 
   .empty_box{
-    height: 60px;
+    height: 55px;
   }
   

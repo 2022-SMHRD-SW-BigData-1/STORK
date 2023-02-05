@@ -2,7 +2,6 @@ import "../../styles/Labor/LaborBook.css";
 import ellips_31 from "../../../assets/svg/Labor/ellipse_31_laborbook.svg";
 import ellips_32 from "../../../assets/svg/Labor/ellipse_32_laborbook.svg";
 import labor_arrow from "../../../assets/svg/Labor/icon_arrow_ios_downward.svg";
-import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 
 import Header from "../Bar/Header";
 import SideBar from "../Bar/SideBar";

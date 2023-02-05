@@ -51,6 +51,7 @@ const InspectStart = () => {
         </>
         );
       })}
+      <div className="empty_box"></div>
       <Footer/>
     </>
   );
