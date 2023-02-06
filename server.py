@@ -2,10 +2,11 @@ from flask import Flask, render_template
 from flask import request, redirect
 from tensorflow import keras
 import numpy as np
+import torch
 
 app = Flask(__name__)
 
-model = keras.models.load_model('best_model_GRU.h5')
+# model = keras.models.load_model('best_model_GRU.h5')
 # model = load_model('model/my_fashion_mnist_model.h5')
  
 @app.route('/test', methods =['POST','GET'])

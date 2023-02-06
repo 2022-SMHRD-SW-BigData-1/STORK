@@ -39,7 +39,7 @@ const TipMain = () => {
   const mom_arr = [mom_img_1,mom_img_2,mom_img_3,mom_img_4,mom_img_5];
   const baby_arr = [baby_img_1,baby_img_2,baby_img_3,baby_img_4];
 
-  const [ch_num,setCh_num] = useState(5);
+  const [ch_num,setCh_num] = useState(8);
   const [ch_momImg,setCh_momImg] = useState(0);
   const [ch_babyImg,setCh_babyImg] = useState(0);
 
