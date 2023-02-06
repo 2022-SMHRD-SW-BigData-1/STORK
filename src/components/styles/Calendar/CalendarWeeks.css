@@ -1,0 +1,88 @@
+.div2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+.day-group6-child,
+.day-group6-item {
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  top: 40%;
+  right: 0;
+  bottom: 50%;
+  left: 0;
+  background-color: rgba(240,97,96,0.3);
+}
+.day-group6-item {
+  top: 57.14%;
+  bottom: 32.86%;
+  background-color: rgba(151,71,255,0.5);
+}
+.day-group5,
+.day-group6 {
+  position: absolute;
+  height: 100%;
+  width: 12.8%;
+  top: 0;
+  bottom: 0;
+}
+.day-group6 {
+  right: 5.07%;
+  left: 82.13%;
+  color: #0f56b3;
+}
+.day-group5 {
+  right: 17.87%;
+  left: 69.33%;
+}
+.day-group0,
+.day-group1,
+.day-group2,
+.day-group3,
+.day-group4 {
+  position: absolute;
+  height: 100%;
+  width: 12.8%;
+  top: 0;
+  right: 30.67%;
+  bottom: 0;
+  left: 56.53%;
+}
+.day-group0,
+.day-group1,
+.day-group2,
+.day-group3 {
+  right: 43.47%;
+  left: 43.73%;
+}
+.day-group0,
+.day-group1,
+.day-group2 {
+  right: 56.27%;
+  left: 30.93%;
+}
+.day-group0,
+.day-group1 {
+  right: 69.07%;
+  left: 18.13%;
+}
+.day-group0 {
+  right: 81.87%;
+  left: 5.33%;
+  color: #ff0000;
+}
+.calendar-weeks {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 15px;
+  color:#000;
+  font-family: Inter;
+}
