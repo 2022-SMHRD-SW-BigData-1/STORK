@@ -20,6 +20,7 @@ def hello() :
     # temp = model.predict("안녕")
     # model.predict("안돼")  
     test = 1
+    print("ddd")
     return f"요약 : {test}"
     # return {"members" : ["1","2","3",f"{test}"]}
     #return "ssssssssssssssssssssssssssss"

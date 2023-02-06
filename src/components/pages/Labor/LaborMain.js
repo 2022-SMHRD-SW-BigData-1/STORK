@@ -5,6 +5,7 @@ import LaborTime from "./LaborTime";
 import React, { useState, useEffect, useRef } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import LaborAlert from "./LaborAlert";
 
 import Header from "../Bar/Header";
 import SideBar from "../Bar/SideBar";
@@ -18,6 +19,8 @@ const LaborMain = () => {
 
   const [start, setStart] = useState();
   const [end, setEnd] = useState();
+
+  const [alert, setAlert] = useState("none")
 
   const [power, setPower] = useState("off")
 
@@ -211,11 +214,13 @@ const LaborMain = () => {
       }
 
       // 진진통 판별 시 
-      if(count_1 == 4){
-        console("1");
-      }
       if(count_2 == 4){
         console("2");
+        setAlert("block")
+        setTimeout(function(){setAlert("none")},5000)
+      }
+      if(count_1 == 4){
+        console("1");
       }
       if(count_3 == 4){
         console("3");
@@ -257,6 +262,8 @@ const LaborMain = () => {
   function ch(){
     let now = new Date();
       console.log(data)
+      setAlert("block")
+      setTimeout(function(){setAlert("none")},5000)
   }
   
 
@@ -273,7 +280,7 @@ const LaborMain = () => {
       <b className="timer_labor_main">{hour>0? hour+" : " : ""}{min<10? "0"+min : min} : {sec<10? "0"+sec : sec}</b>
     </div>
         <div className="labor_help" onClick={()=> nav('/laborbook')}>?</div>
-        <div className="alert_labor">dddddddddd</div>
+        <div className="alert_labor"  style={{display: alert}}><LaborAlert/></div>
     <Footer />
     </>
   );
