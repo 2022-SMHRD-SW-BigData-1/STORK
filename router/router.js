@@ -12,6 +12,7 @@ let conn = mysql.createConnection({
   password: "baebae",
   port: "3307",
   database: "baebae",
+  dateStrings: 'date',
 });
 
 // 산부인과
