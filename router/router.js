@@ -149,6 +149,45 @@ router.post("/Labor_data", function (request, response) {
   });
 });
 
+// 캘린더 일정 DB 전송 
+router.post("/Calendar", function (request, response) {
+  
+  let memo =request.body.memo;
+  let year =request.body.year;
+  let month = request.body.month;
+  let date =request.body.date;
+  let calen_time =request.body.calen_time;
+  
+  let cal_date = year + "-" + month + "-" +date;
+
+  let sql = `insert into calendar (mb_seq, cal_date, cal_time, cal_content) value(3,?,?,?)`;
+  conn.query(sql, [cal_date,calen_time,memo], function (err, rows) {
+    if (!err) {
+      response.json({
+        result: "success",
+      });
+    } else {
+      console.log("메모실패");
+    }
+  });
+});
+
+// 캘린더 데이터 전달
+router.post("/Calendar_data", function (request, response) {
+  
+
+  let mb_seq = 3;
+  let sql = `select * from calendar where mb_seq=(?) order by cal_date, cal_time`;
+  conn.query(sql, [mb_seq], function (err, rows) {
+    if (!err) {
+      response.json({
+        data : rows,
+      });
+    } else {
+      console.log("메모실패");
+    }
+  });
+});
 
 
 router.get("*", function (request, response) {

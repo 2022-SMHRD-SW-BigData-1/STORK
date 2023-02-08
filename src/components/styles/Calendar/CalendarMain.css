@@ -567,7 +567,7 @@
   /* background-color: #000; */
 }
 .calendar_memo{
-  width: 50%;
+  width: 120%;
   outline: none;
   background-color: rgba(217, 217, 217, 0.3 );
   height: 30px;
@@ -577,16 +577,20 @@
 }
 .calendar_time{
   margin-left: 1%;
-  width: 18%;
+  width: 40%;
   height: 30px;
   background-color: rgba(217, 217, 217, 0.3 );
   border: 1px solid  rgba(217, 217, 217, 0.5 );
   border-radius: 20px;
-
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .calendar_sub{
   margin-left: 3%;
-  width: 20%;
+  width: 50%;
   height: 95%;
   background-color: #fff;
   border: 1px solid  rgba(217, 217, 217, 0.5 );
@@ -597,9 +601,32 @@
   font-size: 60px;
 }
 .memo_box{
+  width: 90%;
   height: 10%;
   display: inline-flex;
   flex-direction: row;
   margin-left: 5%;
   align-items: center;
+}
+
+.empty_box2{
+  /* background-color: #000; */
+  height: 10%;
+  width: 5%;
+}
+.time_modal{
+  width: 200px;
+  height: 70px;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+.time_modal_box{
+  margin-top: 130%;
+}
+#time_modal::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+.cale_time_btn{
+  left: 30%;
 }
